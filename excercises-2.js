@@ -10,7 +10,18 @@ var max=(a, b)=>{ if(a>b){
 }
 }
 
+function max(a, b) {
+    if (a > b) {
+        return a
+    } else {
+        return b
+}
+}
+funtion max(a, b) {
+    return  a > b ? a : b
+}
 
+foo = (expression true or false) ? (if true) : (if false) //how ternary work
 
 
 console.assert(max(2,3) === 3)
@@ -21,11 +32,12 @@ console.assert(max(-23, 12) === 12)
 // Define a function maxOfThree() that takes three 
 // numbers as arguments and returns the largest of them.
 // ---------------------
-var maxOfThree=(a,b,c)=>{ 
-    math.max(a,b,c){
-    return max
+function maxOfThree(a,b,c){ 
+    return math.max(a,b,c){
+    
 }
 } 
+
 
 
 console.assert(maxOfThree(2,56,3) === 56)
@@ -37,11 +49,21 @@ console.assert(maxOfThree(-12,4,-5) === 4)
 // string of length 1) and returns true if it is a 
 // vowel, false otherwise.
 // ---------------------
-var isVowel=(a)=> if(a = "a","e","i","o","u"){
-    return true 
-} else {
- 
-}
+
+
+function isVowel(char) {
+    if (typeof char !== 'string') {
+        return false
+    }
+
+    var vowels = ["a","e","i","o","u" ]
+    for (let i = 0; i < vowels.length; i++)
+        if (char.toLowerCase() === vowels[i]){
+            return true
+        } 
+    }
+    return false
+} 
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);
 console.assert(isVowel("b") === false);
@@ -56,6 +78,32 @@ console.assert(isVowel("2") === false)
 // For example, translate("this is fun") should return 
 // the string "tothohisos isos fofunon".
 // ---------------------
+function isVowel(char) {
+    if (typeof char !== 'string') {
+        return false
+    }
+
+    var constinants = ['b', 'c', 'd', 'f' , 'g' ,'h' ,'j', 'k', 'l', 'm,' 'n', 'o', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z' ]
+    for (let i = 0; i < constinants.length; i++)
+        if (char.toLowerCase() === constinants[i]){
+            return true
+        } 
+    }
+    return false
+} 
+
+function rovarspraket(str) {
+    var output = ''
+
+    for (let i=0; i < str.length; i++) {
+        if (isConstinant(string.charAt(i))) {
+            output += str.charAt(i) + 'o' + str.charAt(i)
+        } else {
+            output += char
+        }
+    }
+    return output
+}
 
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
@@ -69,6 +117,10 @@ console.assert(rovarspraket(0) === "0")
 // of a string. For example, reverse("jag testar") should 
 // return the string "ratset gaj".
 // ---------------------
+
+var reverseString(str) {
+    return str.split('').reverse().join('');
+}
 
 
 console.assert(reverse("books") === "skoob")
